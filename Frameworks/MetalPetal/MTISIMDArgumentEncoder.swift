@@ -12,6 +12,7 @@ import Metal
 import MetalPetalObjectiveC.Core
 #endif
 
+@available(iOS, deprecated: 16.0)
 @objc(MTISIMDArgumentEncoder) public class MTISIMDArgumentEncoder: NSObject, MTIFunctionArgumentEncoding {
     
     public enum Error: String, Swift.Error, LocalizedError {

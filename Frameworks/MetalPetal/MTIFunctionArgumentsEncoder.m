@@ -11,6 +11,9 @@
 #import "MTIError.h"
 #import "MTIBuffer.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 static inline void MTIArgumentsEncoderEncodeBytes(MTLFunctionType functionType, id<MTLCommandEncoder> encoder, const void * bytes, NSUInteger length, NSUInteger index) {
     switch (functionType) {
         case MTLFunctionTypeFragment:
@@ -239,3 +242,5 @@ __attribute__((objc_subclassing_restricted))
 }
 
 @end
+
+#pragma clang diagnostic pop

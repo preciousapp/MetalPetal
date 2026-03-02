@@ -27,6 +27,9 @@
 #import "MTIPixelFormat.h"
 #import "MTIFunctionArgumentsEncoder.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 NSUInteger const MTIRenderPipelineMaximumColorAttachmentCount = 8;
 
 @interface MTIRenderPipelineKernelConfiguration () {
@@ -614,3 +617,5 @@ void MTIColorMatrixRenderGraphNodeOptimize(MTIRenderGraphNode *node) {
         }
     }
 }
+
+#pragma clang diagnostic pop

@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @protocol MTIFunctionArgumentEncodingProxy <NSObject>
 
 - (void)encodeBytes:(const void *)bytes length:(NSUInteger)length;
@@ -36,5 +39,6 @@ __attribute__((objc_subclassing_restricted))
 
 @end
 
+#pragma clang diagnostic pop
 
 NS_ASSUME_NONNULL_END
