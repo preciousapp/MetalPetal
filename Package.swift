@@ -20,7 +20,8 @@ let package = Package(
             dependencies: ["MetalPetalObjectiveC"]),
         .target(
             name: "MetalPetalObjectiveC",
-            dependencies: []),
+            dependencies: [],
+            cSettings: [.unsafeFlags(["-Wno-deprecated-declarations"])]),
         .target(
             name: "MetalPetalTestHelpers",
             dependencies: ["MetalPetal"],
